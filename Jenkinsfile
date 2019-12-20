@@ -7,18 +7,18 @@ pipeline{
 		}
 }
 	    stage("Run test"){
-		step{		   
-		sh "docker-compose search-module bookflight-module"		
+		step{
+		sh "docker-compose search-module bookflight-module"
 		}
 	}
-		
-	}
+
+
 	   stage("Bring Grid Down"){
 
 		steps{
 			sh "docker-compose down"
 		}
-} 			
+}
 
 	}
 
