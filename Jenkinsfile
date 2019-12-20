@@ -1,6 +1,13 @@
 pipeline{
 	agent any
 	stages{
+			stage("Pull image"){
+				steps{
+					sh "docker pull shintokg/selenium-docker"
+				}
+
+			}
+
 	   stage("Run Grid"){
 		steps{
 		   sh "docker-compose up -d  hub chrome firefox"
