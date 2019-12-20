@@ -31,7 +31,7 @@ services:
       - HUB_HOST=hub
       - MODULE=searchModule.xml
     volumes:
-      - .output/search-result:/usr/share/udemy/test-
+      - ./output/search-result:/usr/share/udemy/test-
   search-module1:
     image: shintokg/selenium-docker
     depends_on:
@@ -53,7 +53,7 @@ services:
       - HUB_HOST=hub
       - MODULE=bookflight_module.xml
     volumes:
-      - .output/book-result:/usr/share/udemy/test-output
+      - ./output/book-result:/usr/share/udemy/test-output
   bookflight_module1:
     image: shintokg/selenium-docker
     depends_on:
