@@ -7,8 +7,8 @@ pipeline{
 		}
 }
 	    stage("Run test"){
-		step{
-		sh "docker-compose search-module bookflight-module"
+		steps{
+		sh "docker-compose up search-module bookflight-module"
 		}
 	}
 
